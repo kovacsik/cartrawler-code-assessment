@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+After downloading or cloning the repo, do `npm install`<br>
 In the project directory, you can run:
 
 ### `npm start`
