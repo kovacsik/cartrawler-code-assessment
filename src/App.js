@@ -5,6 +5,8 @@ import PickupReturnInfo from './components/PickupReturnInfo';
 import CarDisplay from './components/CarDisplay';
 import CarFullDetails from './components/CarFullDetails';
 import car_data from './data/cars.json';
+import "@babel/polyfill";
+import axios from 'axios';
 import './css/App.css';
 
 
@@ -42,20 +44,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://www.cartrawler.com/ctabe/cars.json")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            pickup_return_data: result[0].VehAvailRSCore.VehRentalCore,
-            vehicle_data: this.organizeVehicleData(result[0].VehAvailRSCore.VehVendorAvails),
-            loading_data: false
-          })
-        },
-        (error) => {
-          console.log(error);
-        }
-      )
+    axios.get("http://www.cartrawler.com/ctabe/cars.json")
+      .then((result) => {
+        this.setState({
+          pickup_return_data: result.data[0].VehAvailRSCore.VehRentalCore,
+          vehicle_data: this.organizeVehicleData(result.data[0].VehAvailRSCore.VehVendorAvails),
+          loading_data: false
+        })
+      })
+      .catch((error) => {
+        console.log("error: ", error)
+      })
 
     /*
       Import the car data from a local JSON file so we don't constantly call the API as we develop
