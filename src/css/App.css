@@ -1,0 +1,89 @@
+@media only screen and (max-width: 600px) {
+  .flexy {
+    flex-direction: column;
+  }
+  .flexy-stay-in-row {
+    flex-direction: row;
+  }
+  .car-sorting {
+    justify-content: center !important;
+  }
+  .app {
+    text-align: center;
+  }
+  .pickup-return {
+    font-size: 0.75em;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    padding: 10px 0;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .flexy {
+    flex-direction: row;
+  }
+}
+
+.app {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: all 2000ms;
+}
+
+.flexy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 10px;
+}
+
+.car-details {
+  border-top: 1px solid lightgray;
+}
+
+.car-sorting {
+  justify-content: flex-end;
+}
+
+.car-sorting button {
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #000066;
+  border-radius: 5px;
+}
+
+.car-sorting button:hover {
+  background-color: #000066;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-back {
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #000066;
+  border-radius: 5px;
+}
+
+.total-amount {
+  font-size: 2em;
+}

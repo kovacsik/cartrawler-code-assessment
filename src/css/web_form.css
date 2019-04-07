@@ -1,0 +1,36 @@
+form {
+  text-align: left;
+  padding: 10px;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 1s ease-out;
+  outline: 0;
+}
+input:required {
+  border-left: 2px solid palegreen;
+}
+input:invalid {
+  border-left: 2px solid red;
+}
+input:focus:invalid {
+  border: 2px solid red;
+  border-radius: 4px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.invalid {
+  background-color: #FAD1D1;
+}
+.email-val {
+  color: red;
+}
