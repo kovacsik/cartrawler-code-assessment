@@ -1,8 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
+
+Live demo hosted on an AWS S3 Bucket: http://kovacsik-cartrawler.s3-website-us-east-1.amazonaws.com/
 
 ## Available Scripts
 
-After downloading or cloning the repo, do `npm install`<br>
+After downloading or cloning the repo, do<br>
+`npm install`<br>
 In the project directory, you can run:
 
 ### `npm start`
